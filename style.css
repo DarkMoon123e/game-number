@@ -99,6 +99,7 @@ form .inputNumbs {
   .wrapper {
     flex-direction: column-reverse;
     height: 100vh;
+    padding-top: 50px;
   }
   .right {
     transform: translateY(-15px);
