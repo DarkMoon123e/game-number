@@ -1,6 +1,14 @@
 let correctShow = document.querySelector(".correctShow");
 let wrongShow = document.querySelector(".wrongShow");
 let rightShow = document.querySelector(".rightShow");
+let left = document.querySelector(".left");
+console.log(left);
+
+let randomNumbs = generateNumber();
+let btn = document.querySelector(".btn");
+let correctNumbs = document.querySelectorAll(".correctNumbs");
+let correctPoss = document.querySelectorAll(".correctPoss");
+let inputNumbsTable = document.querySelectorAll(".inputNumbsTable");
 
 function isDistinctNumber(num) {
   // Chuyển số thành chuỗi và kiểm tra độ dài
@@ -41,18 +49,12 @@ function generateNumber() {
   shuffle(arr);
   return arr.slice(0, 4).join("");
 }
-let randomNumbs = generateNumber();
-let btn = document.querySelector(".btn");
-let correctNumbs = document.querySelectorAll(".correctNumbs");
-let correctPoss = document.querySelectorAll(".correctPoss");
-let inputNumbsTable = document.querySelectorAll(".inputNumbsTable");
 
 console.log(randomNumbs);
 
 let i = 0;
 btn.addEventListener("click", (e) => {
   let inputNumbs = document.querySelector(".inputNumbs").value;
-
   if (
     !isNaN(inputNumbs) &&
     inputNumbs > 1000 &&
@@ -89,10 +91,17 @@ btn.addEventListener("click", (e) => {
     correctShow.classList.add("show");
     rightShow.classList.add("hide");
   }
-  if (i === 9) {
+  if (i === 10) {
     wrongShow.classList.add("show");
     rightShow.classList.add("hide");
   }
 
+  e.preventDefault();
+});
+
+let start = document.querySelector(".start");
+let wrapper2 = document.querySelector(".wrapper2");
+start.addEventListener("click", (e) => {
+  wrapper2.classList.add("hide");
   e.preventDefault();
 });

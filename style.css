@@ -3,12 +3,21 @@
   padding: 0;
   border: 0;
 }
+.wrapper2 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
 .wrapper {
-  height: 80vh;
+  color: #0c5ac0;
+  height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  z-index: -1;
 }
 .left {
   width: 50%;
@@ -24,6 +33,7 @@ td {
   border: 1px solid rgb(53, 141, 208);
   border-collapse: collapse;
   padding: 5px;
+  background-color: #ccc;
 }
 form {
   margin-top: 30px;
@@ -40,11 +50,26 @@ form .inputNumbs {
   border-radius: 10px;
   border: 1px solid rgb(173, 240, 240);
   outline: none;
+  background-color: rgb(207, 240, 174);
+}
+.btn2 {
+  padding: 10px 31px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgb(89, 184, 240);
 }
 .btn {
   padding: 10px 31px;
   border-radius: 10px;
   cursor: pointer;
+  background-color: rgb(89, 184, 240);
+}
+.reset {
+  background-color: rgb(204, 34, 153);
+}
+.rule {
+  font-size: 20px;
+  color: #e21262;
 }
 
 .right {
@@ -63,9 +88,16 @@ form .inputNumbs {
   display: none;
 }
 
-.right .show {
+.show {
   display: block;
 }
-.right .hide {
+.hide {
   display: none;
+}
+
+@media (max-width: 1000px) {
+  .wrapper {
+    flex-direction: column-reverse;
+    height: 80vh;
+  }
 }
