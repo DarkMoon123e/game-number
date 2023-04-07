@@ -95,10 +95,12 @@ btn.addEventListener("click", (e) => {
 
   if (randomNumbs === inputNumbs) {
     alert("You win!");
+    correctShow.classList.remove("hide");
     correctShow.classList.add("show");
     rightShow.classList.add("hide");
   }
   if (i === 10) {
+    wrongShow.classList.remove("hide");
     wrongShow.classList.add("show");
     rightShow.classList.add("hide");
   }

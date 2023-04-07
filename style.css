@@ -83,11 +83,6 @@ form .inputNumbs {
   width: 80%;
   height: auto;
 }
-.right .correctShow,
-.right .wrongShow {
-  display: none;
-}
-
 .show {
   display: block;
 }
