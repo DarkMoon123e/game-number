@@ -99,10 +99,13 @@ form .inputNumbs {
   .wrapper {
     flex-direction: column-reverse;
     height: 100vh;
-    padding-top: 100px;
+    padding-top: 200px;
   }
   .right {
     transform: translateY(-15px);
+  }
+  .music-container {
+    flex-wrap: wrap;
   }
 }
 
