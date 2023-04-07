@@ -102,7 +102,7 @@ btn.addEventListener("click", (e) => {
     wrongShow.classList.add("show");
     rightShow.classList.add("hide");
   }
-
+  document.querySelector(".inputNumbs").value = "";
   e.preventDefault();
 });
 
