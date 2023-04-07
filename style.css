@@ -104,9 +104,6 @@ form .inputNumbs {
   .right {
     transform: translateY(-15px);
   }
-  .music-container {
-    flex-wrap: wrap;
-  }
 }
 
 .music-container {
