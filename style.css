@@ -100,4 +100,10 @@ form .inputNumbs {
     flex-direction: column-reverse;
     height: 80vh;
   }
+  .right {
+    transform: translateY(-15px);
+  }
+  .wrapper2 {
+    height: 100vh;
+  }
 }
