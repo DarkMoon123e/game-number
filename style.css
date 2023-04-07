@@ -92,9 +92,9 @@ form .inputNumbs {
 
 @media (max-width: 1000px) {
   .wrapper {
-    flex-direction: column-reverse;
-    height: 100vh;
-    padding-top: 200px;
+    flex-direction: column;
+    height: 60vh;
+    padding-top: 20px;
   }
   .right {
     transform: translateY(-15px);
