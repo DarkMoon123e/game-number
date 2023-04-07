@@ -104,3 +104,16 @@ form .inputNumbs {
     transform: translateY(-15px);
   }
 }
+
+.music-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.music {
+  text-align: center;
+  color: rgb(230, 67, 94);
+}
+.music2 {
+  color: rgb(19, 79, 211);
+}

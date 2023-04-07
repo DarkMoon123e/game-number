@@ -51,39 +51,46 @@ function generateNumber() {
 }
 
 console.log(randomNumbs);
+let array = [];
 
 let i = 0;
 btn.addEventListener("click", (e) => {
   let inputNumbs = document.querySelector(".inputNumbs").value;
-  if (
-    !isNaN(inputNumbs) &&
-    inputNumbs > 1000 &&
-    inputNumbs < 9999 &&
-    isDistinctNumber(inputNumbs)
-  ) {
-    inputNumbsTable[i].innerText = inputNumbs;
-    // console.log("inputNumbs " + inputNumbs[1]);
-    // console.log("randomNumbs " + randomNumbs.toString()[1]);
-    let countCorrectNumbs = 0;
-    let countCorrectPoss = 0;
-    for (let a = 0; a < 4; a++) {
-      for (let b = 0; b < 4; b++) {
-        if (inputNumbs[a] === randomNumbs.toString()[b]) {
-          countCorrectNumbs++;
-          if (a === b) {
-            countCorrectPoss++;
+
+  let check = array.some((item) => item === inputNumbs);
+  if (check) {
+    alert("You submitted this number, please try again");
+  } else {
+    if (
+      !isNaN(inputNumbs) &&
+      inputNumbs > 1000 &&
+      inputNumbs < 9999 &&
+      isDistinctNumber(inputNumbs)
+    ) {
+      inputNumbsTable[i].innerText = inputNumbs;
+      // console.log("inputNumbs " + inputNumbs[1]);
+      // console.log("randomNumbs " + randomNumbs.toString()[1]);
+      let countCorrectNumbs = 0;
+      let countCorrectPoss = 0;
+      for (let a = 0; a < 4; a++) {
+        for (let b = 0; b < 4; b++) {
+          if (inputNumbs[a] === randomNumbs.toString()[b]) {
+            countCorrectNumbs++;
+            if (a === b) {
+              countCorrectPoss++;
+            }
           }
         }
       }
+      array = [...array, inputNumbs];
+      correctNumbs[i].innerText = countCorrectNumbs;
+      correctPoss[i].innerText = countCorrectPoss;
+      i++;
+    } else {
+      alert(
+        "Please enter a number form 1000 to 9999 and The digits must be different!!!"
+      );
     }
-
-    correctNumbs[i].innerText = countCorrectNumbs;
-    correctPoss[i].innerText = countCorrectPoss;
-    i++;
-  } else {
-    alert(
-      "Please enter a number form 1000 to 9999 and The digits must be different!!!"
-    );
   }
 
   if (randomNumbs === inputNumbs) {
